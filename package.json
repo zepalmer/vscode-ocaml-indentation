@@ -1,0 +1,70 @@
+{
+	"name": "ocaml-indentation",
+	"displayName": "OCaml Indentation",
+	"description": "Indentation formatter for OCaml",
+	"version": "0.1.0",
+	"publisher": "zepalmer",
+	"license": "MIT",
+	"categories": [
+		"Formatters"
+	],
+	"keywords": [
+		"ocaml",
+		"formatter",
+		"format",
+		"formatting",
+		"ocp-indent",
+		"indenter",
+		"indent",
+		"indentation"
+	],
+	"engines": {
+		"vscode": "^1.51.1"
+	},
+	"activationEvents": [
+		"onLanguage:ocaml"
+	  ],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [],
+		"languages": [
+			{
+				"id": "ocaml",
+				"extensions": [
+					".ml",
+					".mli"
+				]
+			}
+		],
+		"configuration": {
+			"title": "OCaml Indentation",
+			"properties": {
+				"ocaml-indentation.ocp-indent-path": {
+					"title": "ocp-indent path",
+					"type": "string",
+					"default": "",
+					"description": "A path to the ocp-indent binary to use.  If empty, ocp-indent is found by searching the PATH environment variable."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"lint": "eslint src --ext ts"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.51.1",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.15.0",
+		"@typescript-eslint/eslint-plugin": "^4.9.0",
+		"@typescript-eslint/parser": "^4.9.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.1.2",
+		"vscode-test": "^1.4.1"
+	}
+}
