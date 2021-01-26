@@ -5,6 +5,13 @@
 	"version": "0.1.0",
 	"publisher": "zepalmer",
 	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/zepalmer/vscode-ocaml-indentation/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:zepalmer/vscode-ocaml-indentation.git"
+	},
 	"categories": [
 		"Formatters"
 	],
@@ -23,7 +30,7 @@
 	},
 	"activationEvents": [
 		"onLanguage:ocaml"
-	  ],
+	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [],
